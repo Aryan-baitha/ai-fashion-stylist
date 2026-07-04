@@ -1,0 +1,19 @@
+PROJECT: AI Fashion Color Fit Matcher
+
+PROBLEM:
+Many people don't know which clothing colors suit their skin tone.
+This leads to confusion while shopping and choosing outfits that 
+don't actually look good on them.
+
+5 FEATURES:
+1. Skin Tone Detector - detects warm/cool/neutral tone from photo
+2. Color Recommender - suggests best colors based on skin tone
+3. Outfit Suggester - recommends full outfits for occasions/seasons
+4. AI Chatbot Stylist - answers fashion questions like a real stylist
+5. Virtual Color Try-On - preview how a color looks before buying
+
+USER FLOW:
+User opens app -> Uploads photo -> App detects skin tone -> 
+Shows recommended colors -> Suggests outfits -> 
+User chats with AI stylist for more advice -> 
+Result: User knows what colors/outfits suit them
