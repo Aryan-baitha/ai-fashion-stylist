@@ -3,6 +3,15 @@ import cv2
 import numpy as np
 from PIL import Image
 
+st.markdown("""
+    <style>
+    .stButton>button {
+        border-radius: 8px;
+        border: 1px solid #D96C8C;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 st.title("AI Fashion Color Fit Matcher")
 st.write("### Upload Your Photo")
 
