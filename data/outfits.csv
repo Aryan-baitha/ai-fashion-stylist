@@ -1,11 +1,61 @@
-outfit_id,color,style,season,gender
-1,Navy Blue,Formal,Winter,Unisex
-2,Red,Party,Summer,Female
-3,Olive Green,Casual,Autumn,Male
-4,White,Formal,Summer,Unisex
-5,Black,Party,Winter,Unisex
-6,Camel,Casual,Autumn,Female
-7,Royal Blue,Formal,Winter,Male
-8,Emerald Green,Party,Summer,Female
-9,Beige,Casual,Spring,Unisex
-10,Maroon,Formal,Autumn,Male
+outfit_id,top_color,bottom_color,occasion,season,style_type,gender
+1,Mauve,Black,Formal,Autumn,Western,Male
+2,Orange,Denim Blue,Formal,Summer,Bohemian,Female
+3,Camel,Black,Formal,Winter,Western,Unisex
+4,Teal,Black,Wedding,Winter,Bohemian,Female
+5,Terracotta,Grey,Wedding,Autumn,Ethnic,Male
+6,Soft Blue,Grey,Party,Autumn,Western,Male
+7,True Red,Black,Formal,Spring,Ethnic,Female
+8,Purple,Beige,Party,Summer,Minimalist,Unisex
+9,Warm Red,Grey,Formal,Autumn,Bohemian,Female
+10,Rose Pink,White,Formal,Summer,Western,Female
+11,Mustard,White,Formal,Spring,Fusion,Female
+12,Mauve,Navy,Casual,Autumn,Fusion,Male
+13,Jade,Navy,Formal,Winter,Bohemian,Unisex
+14,Terracotta,White,Office,Spring,Fusion,Unisex
+15,Soft Blue,Beige,Casual,Autumn,Ethnic,Male
+16,Camel,Navy,Office,Autumn,Ethnic,Male
+17,Rose Pink,Denim Blue,Party,Winter,Minimalist,Female
+18,Mauve,Grey,Casual,Autumn,Western,Male
+19,Blush,Beige,Wedding,Autumn,Bohemian,Female
+20,Rose Pink,Grey,Party,Winter,Western,Unisex
+21,Lavender,Black,Formal,Summer,Western,Unisex
+22,Coral,Denim Blue,Office,Summer,Minimalist,Female
+23,Teal,Grey,Wedding,Autumn,Bohemian,Male
+24,Jade,Denim Blue,Formal,Autumn,Fusion,Male
+25,Emerald Green,Grey,Casual,Spring,Ethnic,Unisex
+26,Blush,Navy,Wedding,Winter,Bohemian,Male
+27,Mauve,Navy,Wedding,Winter,Western,Female
+28,Coral,Beige,Wedding,Summer,Bohemian,Female
+29,Lavender,Black,Formal,Autumn,Fusion,Male
+30,Camel,White,Wedding,Summer,Ethnic,Unisex
+31,Lavender,Black,Wedding,Winter,Western,Unisex
+32,Lavender,Beige,Casual,Autumn,Bohemian,Unisex
+33,Silver,White,Wedding,Winter,Fusion,Female
+34,Jade,Denim Blue,Party,Spring,Bohemian,Female
+35,Warm Red,White,Casual,Summer,Fusion,Male
+36,Rose Pink,Beige,Casual,Winter,Ethnic,Male
+37,Soft Blue,Denim Blue,Formal,Winter,Ethnic,Male
+38,True Red,Black,Wedding,Winter,Fusion,Unisex
+39,Lavender,White,Wedding,Winter,Bohemian,Unisex
+40,Lavender,White,Office,Spring,Western,Male
+41,Warm Red,Denim Blue,Office,Autumn,Minimalist,Female
+42,Navy,Denim Blue,Formal,Summer,Ethnic,Female
+43,Blush,Navy,Formal,Winter,Western,Male
+44,Grey,Grey,Casual,Spring,Western,Female
+45,Navy,White,Formal,Spring,Bohemian,Male
+46,Camel,Denim Blue,Wedding,Summer,Ethnic,Male
+47,Coral,Grey,Office,Spring,Western,Female
+48,Camel,White,Office,Summer,Minimalist,Female
+49,Navy,Navy,Office,Spring,Western,Male
+50,Emerald Green,White,Formal,Summer,Fusion,Male
+51,Camel,Beige,Office,Winter,Ethnic,Unisex
+52,Mustard,White,Formal,Summer,Western,Female
+53,Warm Red,Beige,Casual,Summer,Bohemian,Male
+54,Silver,Denim Blue,Wedding,Autumn,Fusion,Male
+55,Jade,Denim Blue,Party,Winter,Fusion,Female
+56,Orange,Denim Blue,Party,Spring,Fusion,Male
+57,Olive Green,Grey,Wedding,Summer,Ethnic,Unisex
+58,Gold,Beige,Party,Winter,Fusion,Male
+59,Terracotta,Navy,Party,Winter,Minimalist,Unisex
+60,Soft Blue,Navy,Wedding,Summer,Bohemian,Female
