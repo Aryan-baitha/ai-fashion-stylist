@@ -1,0 +1,5 @@
+NOTES / BUGS FOUND DURING PRACTICE:
+- Practiced the demo twice, end-to-end.
+- No bugs or errors encountered during either run.
+- All pages loaded correctly and features worked as expected.
+- Timing was close to 5 minutes as planned.
