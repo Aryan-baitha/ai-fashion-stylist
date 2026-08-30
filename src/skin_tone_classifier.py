@@ -50,5 +50,6 @@ def analyze_photo(image_path):
     return skin_tone
 
 
-# Test it on your photo
-analyze_photo("data/photo.jpg")
+if __name__ == "__main__":
+    # Test it on your photo
+    analyze_photo("data/photo.jpg")
