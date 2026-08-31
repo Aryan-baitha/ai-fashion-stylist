@@ -2,6 +2,7 @@ from color_recommender import analyze_and_recommend, load_color_rules
 from dominant_color_extractor import get_most_dominant_color
 from palette_generator import rgb_to_hex
 from color_harmony import hex_to_rgb, color_distance
+from image_validation import validate_image
 
 
 def get_all_known_colors():
@@ -28,37 +29,49 @@ def identify_color_name(hex_code, known_colors, threshold=80):
 
 
 def check_outfit_compatibility(selfie_path, outfit_path):
-    skin_result = analyze_and_recommend(selfie_path)
-    if skin_result is None:
-        return None
+    try:
+        skin_result = analyze_and_recommend(selfie_path)
+        if skin_result.get("error"):
+            return {"error": skin_result["error"]}
 
-    skin_tone = skin_result["skin_tone"]
-    recommended_colors = skin_result["recommended_colors"]
-    recommended_names = [c["name"] for c in recommended_colors]
+        outfit_valid, outfit_message = validate_image(outfit_path)
+        if not outfit_valid:
+            return {"error": f"Outfit photo issue: {outfit_message}"}
 
-    dominant_rgb = get_most_dominant_color(outfit_path)
-    dominant_hex = rgb_to_hex(dominant_rgb)
+        skin_tone = skin_result["skin_tone"]
+        recommended_colors = skin_result["recommended_colors"]
+        recommended_names = [c["name"] for c in recommended_colors]
 
-    known_colors = get_all_known_colors()
-    outfit_color_name, distance = identify_color_name(dominant_hex, known_colors)
+        dominant_rgb = get_most_dominant_color(outfit_path)
+        dominant_hex = rgb_to_hex(dominant_rgb)
 
-    is_recommended = outfit_color_name in recommended_names
+        known_colors = get_all_known_colors()
+        outfit_color_name, distance = identify_color_name(dominant_hex, known_colors)
 
-    if is_recommended:
-        message = f"This outfit's color is {outfit_color_name.upper()} — Excellent for your {skin_tone} skin tone ✓"
-    else:
-        message = f"This outfit's color is {outfit_color_name.upper()} — Not ideal for your {skin_tone} skin tone ✗"
+        is_recommended = outfit_color_name in recommended_names
 
-    return {
-        "skin_tone": skin_tone,
-        "outfit_color_name": outfit_color_name,
-        "outfit_hex": dominant_hex,
-        "is_recommended": is_recommended,
-        "message": message
-    }
+        if is_recommended:
+            message = f"This outfit's color is {outfit_color_name.upper()} — Excellent for your {skin_tone} skin tone ✓"
+        else:
+            message = f"This outfit's color is {outfit_color_name.upper()} — Not ideal for your {skin_tone} skin tone ✗"
+
+        return {
+            "error": None,
+            "skin_tone": skin_tone,
+            "outfit_color_name": outfit_color_name,
+            "outfit_hex": dominant_hex,
+            "is_recommended": is_recommended,
+            "message": message
+        }
+
+    except Exception as e:
+        print(f"Unexpected error in check_outfit_compatibility: {e}")
+        return {"error": "Something went wrong while checking outfit compatibility. Please try different photos."}
 
 
 if __name__ == "__main__":
     result = check_outfit_compatibility("data/photo.jpg", "data/shirt.jpeg")
-    if result:
+    if result.get("error"):
+        print(f"Error: {result['error']}")
+    else:
         print(result["message"])
